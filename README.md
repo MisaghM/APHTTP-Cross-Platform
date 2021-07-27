@@ -1,8 +1,34 @@
-AP HTTP
-===
-[![Travis (.org)](https://travis-ci.com/UTAP/APHTTP.svg)](https://travis-ci.com/UTAP/APHTTP)
-[![code style: LLVM](https://img.shields.io/badge/code_style-LLVM-brightgreen.svg)](https://llvm.org/docs/CodingStandards.html)
-[![Release](https://img.shields.io/github/release/UTAP/APHTTP.svg)](https://github.com/UTAP/APHTTP/releases/latest)
-[![Wiki](https://img.shields.io/badge/GitHub-Wiki-yellowgreen.svg)](https://github.com/UTAP/APHTTP/wiki)
 
-**AP HTTP::_server_** is a simple web application server-side blocking framework for C++ based on simplified versions of [W++](http://konteck.github.io/wpp/), [HappyHTTP](http://scumways.com/happyhttp/happyhttp.html), and [cpp-netlib](http://cpp-netlib.org/).
+# APHTTP Cross-Platform
+
+A fork of **[ATHTTP](https://github.com/UTAP/APHTTP)** to make it cross-platform.  
+Made for a [pull request](https://github.com/UTAP/APHTTP/pull/6).
+
+## Changes
+
+- **server/server.hpp/cpp**
+  
+  The socket part and small fixes.
+
+- **utils/utilities.cpp**
+
+  `readFile` and `writeObjectToFile`.
+
+- **template_parser.hpp/cpp**
+
+  To run Windows system commands.
+
+- **makefile**
+
+  Link `Ws2_32` on Windows.
+
+- **examples/main.cpp**
+
+  Catch exception by reference.
+
+## References
+
+Some useful references on cross-platform socket programming:  
+[Hands-On Network Programming](https://handsonnetworkprogramming.com/articles/differences-windows-winsock-linux-unix-bsd-sockets-compatibility/)  
+[This Stack Overflow answer](https://stackoverflow.com/a/28031039)  
+[This github gist](https://gist.github.com/roxlu/3709838)
